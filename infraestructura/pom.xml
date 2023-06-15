@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.taller.microservicio</groupId>
+        <artifactId>msd-ord-cli-gestion-cliente</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>infraestructura</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>hexagonal-architecture-infraestructura</name>
+ 
+
+   	<properties>
+   	   <maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<java.version>11</java.version>
+	</properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.taller.microservicio</groupId>
+            <artifactId>dominio</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--  
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.zaxxer</groupId>
+                    <artifactId>HikariCP</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        -->
+            <!-- 
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+          <version>2.3.3.RELEASE</version> 
+        </dependency>
+        -->
+          <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+         
+          <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>		
+		</dependency>
+        
+		<!-- JPA Vendor -->
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			
+		</dependency>
+        
+		<!-- IN MEMORY Database and JDBC Driver -->
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.0.7</version>
+		</dependency>
+    </dependencies>
+
+</project>

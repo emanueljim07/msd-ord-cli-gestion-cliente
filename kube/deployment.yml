@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k-msd-ord-cli-gestion-cliente-ah-spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k-msd-ord-cli-gestion-cliente-ah-spring
+  template:
+    metadata:
+      labels:
+        app: k-msd-ord-cli-gestion-cliente-ah-spring
+    spec:
+      containers:
+        - name: app
+          image: wiljim/msd-ord-cli-gestion-cliente:1.0.0
+          ports:
+            - containerPort: 3002
+          imagePullPolicy: Always
